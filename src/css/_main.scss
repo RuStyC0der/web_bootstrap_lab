@@ -1,0 +1,17 @@
+
+header{
+    text-align: center;
+}
+.inputs{
+    border: 1px solid black;
+    padding: 2%;
+    width: 50%;
+    height: 50vh;
+    overflow-y: scroll;
+    margin: 10px auto;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
