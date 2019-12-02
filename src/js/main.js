@@ -1,20 +1,27 @@
 "use strict"
-let x = document.getElementsByClassName("input__block")[0].outerHTML;
+const x = document.getElementsByClassName("input__block")[0].outerHTML;
 
-addBtn.addEventListener("click", function () {
+let funcadd = () => {
     document.getElementsByClassName("inputs")[0].innerHTML += x;
-});
+};
 
-removeBtn.addEventListener("click", function () {
+let funcrmove = () => {
     let formContainer = document.getElementsByClassName("inputs")[0];
     if (formContainer.children.length > 1){
         formContainer.removeChild(formContainer.lastChild);
     }
-});
+}
 
-clearBtn.addEventListener("click", function () {
+
+addBtn.addEventListener("click", funcadd);
+
+removeBtn.addEventListener("click", funcrmove);
+
+clearBtn.addEventListener("click", () => {
     let listOfInputs = document.getElementsByClassName("inputs")[0].getElementsByTagName("input");
     for (let item of listOfInputs) {
+        console.log(item.value);
         item.value = "";
+        
     }
 });
